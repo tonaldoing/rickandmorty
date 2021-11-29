@@ -1,38 +1,100 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
 .App {
+  background-color: #222222;
+}
+
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0;
+  height: 40px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.logo img {
+  width: 40vh;
+}
+
+section.personajesContainer{
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
+}
+
+.personaje {
+  background-color: white;
+  max-width: 250px;
+  border-radius: 8px;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  overflow: hidden;
+  margin: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+
+.personaje div > div {
+  width: 100%;
+  border-bottom: 1px solid #222;
+}
+
+.personaje h1 {
+  min-height: 60px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.personaje ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.personaje small {
+  text-align: left;
+  width: 30%;
+}
+
+.personaje p {
+  width: 50%;
+}
+
+.personaje ul li{
+  padding: 10px 0;  
+}
+
+.personaje ul li{
+  padding: 10px 0;  
+  width: 33.33%;
+}
+
+.personaje ul li.Alive{
+  background-color: green;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.personaje ul li.Dead{
+  background-color: red;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.personaje ul li.unknown{
+  background-color: yellow;
+  color: #222;
 }
